@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>庆北韩国料理 - 地道韩味！</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div style='display:none;'>
+  <!-- 微信分享缩略图 -->
+  <img src='images/logo.png' />
+  <p>纯韩国文化，回归韩餐本质！</p>
+</div> 
+<div class="menu"><a href="index.html#slide2"><img src="images/menu.png"></a></div>
+<div class="indexPic">
+<img src="images/p7_01.jpg"><img src="images/p7_02.jpg"><img src="images/p7_03.jpg"><img src="images/p7_04.jpg"><img src="images/p7_05.jpg"><img src="images/p7_06.jpg"><img src="images/p7_07.jpg">
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/swiper-3.3.1.jquery.min.js"></script>
+<script src="js/swiper.animate1.0.2.min.js"></script>
+<script src="js/main.js"></script>
+<script> 	
+scaleW=window.innerWidth/320;
+scaleH=window.innerHeight/480;
+var resizes = document.querySelectorAll('.resize');
+          for (var j=0; j<resizes.length; j++) {
+           resizes[j].style.width=parseInt(resizes[j].style.width)*scaleW+'px';
+		   resizes[j].style.height=parseInt(resizes[j].style.height)*scaleH+'px';
+		   resizes[j].style.top=parseInt(resizes[j].style.top)*scaleH+'px';
+		   resizes[j].style.left=parseInt(resizes[j].style.left)*scaleW+'px'; 
+          }	  
+  var mySwiper = new Swiper ('.swiper-container', {
+   hashnav:true,
+   direction : 'vertical',
+   pagination: '.swiper-pagination',
+  //virtualTranslate : true,
+   mousewheelControl : true,
+   onInit: function(swiper){
+   swiperAnimateCache(swiper);
+   swiperAnimate(swiper);
+	  },
+   onSlideChangeEnd: function(swiper){
+	swiperAnimate(swiper);
+    },
+	onTransitionEnd: function(swiper){
+	swiperAnimate(swiper);
+    },
+		
+	watchSlidesProgress: true,
+
+      onProgress: function(swiper){
+        for (var i = 0; i < swiper.slides.length; i++){
+          var slide = swiper.slides[i];
+          var progress = slide.progress;
+          var translate = progress*swiper.height/4;  
+		  scale = 1 - Math.min(Math.abs(progress * 0.5), 1);
+          var opacity = 1 - Math.min(Math.abs(progress/2),0.5);
+          slide.style.opacity = opacity;
+		  es = slide.style;
+		  es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform = 'translate3d(0,'+translate+'px,-'+translate+'px) scaleY(' + scale + ')';
+
+        }
+      },
+	
+	   onSetTransition: function(swiper, speed) {
+        for (var i = 0; i < swiper.slides.length; i++){
+          es = swiper.slides[i].style;
+		  es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration = es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = speed + 'ms';
+
+        }
+      },
+	
+	   })  
+	  
+//分享信息
+		var shareInfo = {
+			appid : '',
+			imgUrl : '',
+			lineLink : document.location.href,
+			shareTitle : '庆北韩国料理 - 地道韩味！',
+			descContent : '庆北韩国料理 - 地道韩味！'
+		};
+H5.share(shareInfo); //分享
+H5.music();
+// 翻转屏幕提示
+		window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
+			if(window.orientation === 180 || window.orientation === 0) {
+				$('html').removeClass('landscape');
+			}
+			if(window.orientation === 90 || window.orientation === -90 ){
+				$('html').addClass('landscape');
+			}
+		}, false);   
+		  
+  </script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>庆北韩国料理 - 地道韩味！</title>
+<meta name="viewport" content="width=640,user-scalable=no" />
+<link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div style='display:none;'>
+  <!-- 微信分享缩略图 -->
+  <img src='images/logo.png' />
+  <p>纯韩国文化，回归韩餐本质！</p>
+</div> 
+<!-- 横屏提示 -->
+		<div class="lock_wrap">
+			<div class="lock">
+				为了更好的体验，请使用竖屏浏览
+			</div>
+		</div>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+    	<section class="swiper-slide swiper-slide1" data-hash="slide1">
+        	<div class="logo ani resize" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0s"><img src="images/logo.png"></div>
+        	<div class="leftText ani resize" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.3s" swiper-animate-delay="1s"><img src="images/img02.png"></div>
+            <div class="rightText ani resize" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.3s" swiper-animate-delay="1.3s"><img src="images/img03.png"></div>
+            <div class="haoText ani resize" swiper-animate-effect="flipInX" swiper-animate-duration="0.8s" swiper-animate-delay="0.5s"><img src="images/img01.png"></div>
+            <div class="img01 ani resize" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s"><img src="images/img10.png"></div>
+            <div class="img02 ani resize" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.7s"><img src="images/img09.png"></div>
+            <div class="img03 ani resize" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.9s"><img src="images/img08.png"></div>
+            <div class="img04 ani resize" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2.1s"><img src="images/img07.png"></div>
+            <div class="img05 ani resize" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2.3s"><img src="images/img06.png"></div>
+            <div class="man ani resize" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="2.7s"><img src="images/img04.png"></div>
+            <div class="woman ani resize" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="3.2s"><img src="images/img05.png"></div>
+            <img src="images/page.png" style="width:30px;height:22px;" id="array" class="resize">
+        </section>
+        <section class="swiper-slide swiper-slide2" data-hash="slide2">
+        	<div class="logo2 ani resize" swiper-animate-effect="bounceIn" swiper-animate-duration="0.8s" swiper-animate-delay="0s"><img src="images/logo2.png"></div>
+            <div class="nav ani resize" swiper-animate-effect="zoomIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.8s"><img src="images/nav.png"></div>
+            <a href="page01.html"><img class="caidan01 ani resize" src="images/menu01.png" swiper-animate-effect="zoomIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.1s"></a>
+            <a href="page02.html"><img class="caidan02 ani resize" src="images/menu02.png" swiper-animate-effect="zoomIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.2s"></a>
+            <a href="page03.html"><img class="caidan03 ani resize" src="images/menu03.png" swiper-animate-effect="zoomIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.3s"></a>
+            <a href="page04.html"><img class="caidan04 ani resize" src="images/menu04.png" swiper-animate-effect="zoomIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.4s"></a>
+            <a href="page05.html"><img class="caidan05 ani resize" src="images/menu05.png" swiper-animate-effect="zoomIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.5s"></a>
+            <a href="page06.html"><img class="caidan06 ani resize" src="images/menu06.png" swiper-animate-effect="zoomIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.6s"></a>
+            <a href="page07.html"><img class="caidan07 ani resize" src="images/menu07.png" swiper-animate-effect="zoomIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.7s"></a>
+            <a href="page08.html"><img class="caidan08 ani resize" src="images/menu08.png" swiper-animate-effect="zoomIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.8s"></a>
+        </section>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/swiper-3.3.1.jquery.min.js"></script>
+<script src="js/swiper.animate1.0.2.min.js"></script>
+<script src="js/main.js"></script>
+<script> 	
+scaleW=window.innerWidth/320;
+scaleH=window.innerHeight/480;
+var resizes = document.querySelectorAll('.resize');
+          for (var j=0; j<resizes.length; j++) {
+           resizes[j].style.width=parseInt(resizes[j].style.width)*scaleW+'px';
+		   resizes[j].style.height=parseInt(resizes[j].style.height)*scaleH+'px';
+		   resizes[j].style.top=parseInt(resizes[j].style.top)*scaleH+'px';
+		   resizes[j].style.left=parseInt(resizes[j].style.left)*scaleW+'px'; 
+          }	  
+  var mySwiper = new Swiper ('.swiper-container', {
+   hashnav:true,
+   direction : 'vertical',
+   pagination: '.swiper-pagination',
+  //virtualTranslate : true,
+   mousewheelControl : true,
+   onInit: function(swiper){
+   swiperAnimateCache(swiper);
+   swiperAnimate(swiper);
+	  },
+   onSlideChangeEnd: function(swiper){
+	swiperAnimate(swiper);
+    },
+	onTransitionEnd: function(swiper){
+	swiperAnimate(swiper);
+    },
+		
+	watchSlidesProgress: true,
+
+      onProgress: function(swiper){
+        for (var i = 0; i < swiper.slides.length; i++){
+          var slide = swiper.slides[i];
+          var progress = slide.progress;
+          var translate = progress*swiper.height/4;  
+		  scale = 1 - Math.min(Math.abs(progress * 0.5), 1);
+          var opacity = 1 - Math.min(Math.abs(progress/2),0.5);
+          slide.style.opacity = opacity;
+		  es = slide.style;
+		  es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform = 'translate3d(0,'+translate+'px,-'+translate+'px) scaleY(' + scale + ')';
+
+        }
+      },
+	
+	   onSetTransition: function(swiper, speed) {
+        for (var i = 0; i < swiper.slides.length; i++){
+          es = swiper.slides[i].style;
+		  es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration = es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = speed + 'ms';
+
+        }
+      },
+	
+	   })  
+	  
+//分享信息
+		var shareInfo = {
+			appid : '',
+			imgUrl : '',
+			lineLink : document.location.href,
+			shareTitle : '庆北韩国料理 - 地道韩味！',
+			descContent : '庆北韩国料理 - 地道韩味！'
+		};
+H5.share(shareInfo); //分享
+H5.music();
+// 翻转屏幕提示
+		window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
+			if(window.orientation === 180 || window.orientation === 0) {
+				$('html').removeClass('landscape');
+			}
+			if(window.orientation === 90 || window.orientation === -90 ){
+				$('html').addClass('landscape');
+			}
+		}, false);   
+		  
+  </script>
+
+</body>
+</html>
